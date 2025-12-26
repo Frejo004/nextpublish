@@ -21,6 +21,7 @@ const articles = [
   },
 ];
 
+
 export default async function ArticlePage({
   params,
 }: {
@@ -33,6 +34,11 @@ export default async function ArticlePage({
   if (!article) {
     notFound(); // déclenche articles/not-found.tsx
   }
+
+  if (id !=="123"){
+  notFound();
+  };
+
 
   return (
     <article className="space-y-6">
